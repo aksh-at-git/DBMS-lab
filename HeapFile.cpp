@@ -74,8 +74,8 @@ public:
                     currentPage -> countOfRecords++;
                     
                     currentPage -> directory[currentPage -> startAddressOfFreeSpace] = {keyToInsert, recordSize};
-                    currentPage -> startAddressOfFreeSpace = firstPage -> startAddressOfFreeSpace + recordSize;
-                    currentPage -> freeSpace = firstPage -> freeSpace - (recordSize + 4);
+                    currentPage -> startAddressOfFreeSpace = currentPage -> startAddressOfFreeSpace + recordSize;
+                    currentPage -> freeSpace = currentPage -> freeSpace - (recordSize + 4);
 
                     inserted = true;
                 }else{
